@@ -1,5 +1,11 @@
 <h1>Store For Later</h1>
 
+
+<div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['Zunsx8NPDc@munkeyto'] %>"></div>
+
 <div class="cards">
 <% @stores.each do |store| %>
 <% if store.photo.attached? %>

@@ -1,6 +1,13 @@
 class StoresController < ApplicationController
   def index
     @stores = Store.all
+
+    @markers = @stores.geocoded.map do |store|
+      {
+        lat: store.latitude,
+        lng: store.longitude
+      }
+    end
   end
 
   def show
