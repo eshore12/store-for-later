@@ -1,0 +1,13 @@
+<h1>Store For Later</h1>
+
+<div class="cards">
+<% @stores.each do |store| %>
+<% if store.photo.attached? %>
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://picsum.photos/seed/picsum/200/300)">
+<% else %>
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/collection/771284/1600x900)">
+<% end %>
+<h2> <%= store.name %> </h2>
+</div>
+<% end %>
+</div>
