@@ -14,7 +14,9 @@ puts "Creating stores..."
 
 10.times do
   store = Store.create!(
-    name: Faker::JapaneseMedia::StudioGhibli.character
+    name: Faker::JapaneseMedia::StudioGhibli.character,
+    latitude: Faker::Address.latitude,
+    longitude: Faker::Address.longitude
   )
 
   file = URI.open("https://picsum.photos/seed/picsum/200/300")

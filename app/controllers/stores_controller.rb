@@ -4,8 +4,8 @@ class StoresController < ApplicationController
 
     @markers = @stores.geocoded.map do |store|
       {
-        lat: store.latitude,
-        lng: store.longitude
+        latitutde: store.latitude,
+        longitude: store.longitude
       }
     end
   end
@@ -40,6 +40,6 @@ class StoresController < ApplicationController
   private
 
   def stores_params
-    params.require(:store).permit(:name, :photo)
+    params.require(:store).permit(:name, :photo, :longitude, :latitude)
   end
 end
