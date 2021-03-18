@@ -6,6 +6,10 @@
      data-markers="<%= @markers.to_json %>"
      data-mapbox-api-key="<%= ENV['Zunsx8NPDc@munkeyto'] %>"></div>
 
+         <div class="add-store-button">
+      <%= link_to "➕ Add Store", new_store_path, class: "btn btn-ghost" %>
+    </div>
+
 <div class="cards">
 <% @stores.each do |store| %>
 <% if store.photo.attached? %>
