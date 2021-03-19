@@ -4,7 +4,7 @@
 <div id="map"
      style="width: 100%; height: 600px;"
      data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['Zunsx8NPDc@munkeyto'] %>"></div>
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 
          <div class="add-store-button">
       <%= link_to "➕ Add Store", new_store_path, class: "btn btn-ghost" %>

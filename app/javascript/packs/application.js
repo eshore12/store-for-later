@@ -25,13 +25,24 @@ require("channels")
 // External imports
 import "bootstrap";
 
+// import { initMapbox } from '../plugins/init_mapbox';
+
+// // Internal imports, e.g:
+// // import { initSelect2 } from '../components/init_select2';
+
+// document.addEventListener('turbolinks:load', () => {
+//   // Call your functions here, e.g:
+//   // initSelect2();
+//   initMapbox();
+// });
+
+
+import 'mapbox-gl/dist/mapbox-gl.css';
 import { initMapbox } from '../plugins/init_mapbox';
-
-// Internal imports, e.g:
-// import { initSelect2 } from '../components/init_select2';
-
+import { loadDynamicBannerText } from '../components/banner';
+import { bookingPriceUpdate } from '../components/booking_price';
 document.addEventListener('turbolinks:load', () => {
-  // Call your functions here, e.g:
-  // initSelect2();
   initMapbox();
+  loadDynamicBannerText();
+  bookingPriceUpdate();
 });
